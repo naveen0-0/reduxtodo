@@ -4,6 +4,8 @@ export default (state=[{title : "Naveen",done:false}],action)=>{
             return [
                 ...state, action.payload
             ]
+        case "CHANGETODOCOMPLETE":
+            return action.payload
         default:
             return state;
     }
