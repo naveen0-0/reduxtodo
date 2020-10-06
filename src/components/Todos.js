@@ -1,17 +1,21 @@
-import React,{ useEffect } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux'
 
 export default function Todos() {
 
     let todos = useSelector(state=>state.todos);
 
+    const changeTodoDone = todo => {
+        console.log(todo)
+    }
+
     return (
         <div className="todosContainer">
             {todos.map((todo,index)=>(
-                <div className="todo">
-                    <div>{index}</div>
-                    <div>{todo.title}</div>
-                    <div><input type="checkbox" checked={todo.done}/></div>
+                <div className="todo" key={index}>
+                    <div className="number">{index}</div>
+                    <div className="todoName">{todo.title}</div>
+                    <div className="todoDone"><input type="checkbox" checked={todo.done} onChange={()=>{changeTodoDone(todo)}}/></div>
                 </div>
             ))}
         </div>

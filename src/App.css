@@ -38,9 +38,9 @@ button {
 .todosContainer {
     background-color: #2e2929;
     width: 95%;
-    margin: auto;
     border-radius: 4px;
     color: whitesmoke;
+    margin: 10px auto;
 }
 
 .todo {
@@ -48,4 +48,18 @@ button {
     justify-content: space-around;
     padding: 10px;
     align-items: center;
+    width: 100%;
+}
+
+.number {
+    width: 20px;
+}
+
+.todoName {
+    width: 50%;
+    word-wrap: break-word;
+}
+
+.todoDone {
+    width: 30px;
 }

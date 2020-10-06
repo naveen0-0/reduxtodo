@@ -1,10 +1,14 @@
-import React,{ useState } from 'react'
+import React,{ useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 export default function TodoForm() {
-    const [ todo, setTodo ] = useState("")
+    const [ todo, setTodo ] = useState("");
+    const dispatch = useDispatch();
 
     const addTodo = e => {
         e.preventDefault();
+        dispatch({type : "ADDTODO",payload : { title : todo, done : false }})
+        setTodo("")
     }
 
     return (
