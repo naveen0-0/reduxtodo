@@ -34,3 +34,18 @@ button {
     font-size: 18px;
     color: cornflowerblue;
 }
+
+.todosContainer {
+    background-color: #2e2929;
+    width: 95%;
+    margin: auto;
+    border-radius: 4px;
+    color: whitesmoke;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    align-items: center;
+}
